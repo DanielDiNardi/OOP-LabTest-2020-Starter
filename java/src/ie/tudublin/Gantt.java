@@ -83,6 +83,7 @@ public class Gantt extends PApplet
 		{
 			Task task = tasks.get(i);
 
+			//Start button
 			if(mouseX > map(task.getStart(), 1, 30, lineX, lineX + (lineDiv * (max - 1))) && 
 			mouseX < map(task.getStart(), 1, 30, lineX, lineX + (lineDiv * (max - 1))) + 10f &&
 			mouseY > y - divider / 2f &&
@@ -92,6 +93,7 @@ public class Gantt extends PApplet
 
 				selectedStart = i;
 			}
+			//End button
 			else if(mouseX < map(task.getEnd(), 1, 30, lineX, lineX + (lineDiv * (max - 1))) && 
 			mouseX > map(task.getEnd(), 1, 30, lineX, lineX + (lineDiv * (max - 1))) - 10f &&
 			mouseY > y - divider / 2f &&
