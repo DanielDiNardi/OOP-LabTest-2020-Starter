@@ -16,7 +16,7 @@ public class Task
 
     public Task(TableRow tr)
     {
-        this(tr.getString("Task"), tr.getInt("Start"))
+        this(tr.getString("Task"), tr.getInt("Start"), tr.getInt("End"));
     }
 
     public String getTask() {
