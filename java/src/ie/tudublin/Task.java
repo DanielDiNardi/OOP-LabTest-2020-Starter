@@ -1,4 +1,4 @@
-package ie;
+package ie.tudublin;
 
 import processing.data.TableRow;
 
@@ -16,7 +16,7 @@ public class Task
 
     public Task(TableRow tr)
     {
-        
+        this(tr.getString("Task"), tr.getInt("Start"))
     }
 
     public String getTask() {

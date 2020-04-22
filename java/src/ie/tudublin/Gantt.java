@@ -1,9 +1,14 @@
 package ie.tudublin;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class Gantt extends PApplet
 {	
+	ArrayList<Task> tasks = new ArrayList<Task>();
 	
 	public void settings()
 	{
@@ -12,12 +17,18 @@ public class Gantt extends PApplet
 
 	public void loadTasks()
 	{
-		
+		Table t = loadTable("tasks.csv", "header");
+
+		for(TableRow rows: t.rows())
+		{
+			Task fill = new Task(rows);
+			tasks.add(fill);
+		}
 	}
 
 	public void printTasks()
 	{
-		
+		for(int i = 0; i < )
 	}
 	
 	public void mousePressed()
